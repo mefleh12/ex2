@@ -1,98 +1,168 @@
-/* General styles */
+/* עיצוב כללי */
 body {
     margin: 0;
     padding: 0;
     font-family: Tahoma, Arial, sans-serif;
     background-image: url('background.png');
     background-size: cover;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* Header styles */
+/* עיצוב הבאנר */
 header {
     width: 100%;
-    height: 4rem;
+    height: 4rem;  /* גובה מדויק */
     background-image: url('bannerbg.png');
     background-repeat: repeat-x;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0;
+    padding: 0;
 }
 
 header img {
-    max-height: 100%;
-    width: auto;
+    height: 100%;  /* מתאים לגובה הבאנר */
+    width: auto;   /* שמירה על יחס גובה-רוחב נכון */
 }
 
-/* Page title */
+/* עיצוב כותרת */
 h1 {
-    font-family: Verdana, Calibri, sans-serif;
-    font-size: 3rem;
-    font-weight: bold;
-    text-align: center;
-    color: #000;
-    text-shadow: 2px 2px #999;
-    margin: 1rem 0;
+    font-family: Verdana, Calibri, sans-serif;  /* סדר עדיפויות לגופנים */
+    font-size: 3rem;  /* גודל גופן */
+    font-weight: bold;  /* טקסט מודגש */
+    text-align: center;  /* מרכז את הטקסט */
+    color: #000;  /* צבע הטקסט */
+    text-shadow: 2px 2px #999999;  /* צל לטקסט */
+    margin: 1rem 0;  /* ריווח מעל ומתחת לכותרת */
 }
 
-/* Rating toolbar */
 #rating {
-    width: 100%;
+    width: 100%;  /* פרישת הדירוג לרוחב מלא של המסגרת */
+    background-image: url('rbg.png');
+    background-repeat: repeat-x;
+    height: 90px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    background-color: #5D8B3E;
-    color: #FFF;
-    padding: 0.5rem 1rem;
+    padding-left: 15px;  /* הכנסת התוכן פנימה */
     border-radius: 10px;
     margin-bottom: 1rem;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
 }
 
 #rating img {
-    height: 60px;
+    height: 70px;  /* התאמת גובה האייקון */
     margin-right: 10px;
 }
 
 #rating span {
-    font-size: 2.5rem;
+    font-size: 4rem;
     font-weight: bold;
     color: #FF0000;
+    line-height: 90px;
 }
 
-/* Main container */
+
+/* אזור התוכן המרכזי */
 main {
-    width: 95%;
-    max-width: 1200px;
-    margin: 20px auto;
-    border: 4px solid #999;
-    border-radius: 10px;
-    background-color: #FFF;
-    padding: 20px;
-    box-sizing: border-box;
+    width: 90%;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    border: 4px solid #999;
+    border-radius: 40px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-/* General overview section */
+/* אזור שמאלי - ביקורות ודירוג */
+#left-content {
+    width: 68%;  /* הרחבה קלה של אזור הביקורות */
+}
+
 #general-overview {
-    width: 25%;
+    width: 28%;
     background-color: #5D8B3E;
     color: #F1F1E4DA;
     padding: 1.5rem;
+    border-radius: 10px;  /* פינות מעוגלות */
     box-sizing: border-box;
-    border-radius: 10px;
-    text-align: left;
+    overflow: hidden;  /* מניעת חריגה של התמונה מהמסגרת */
+}
+
+#general-overview img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;  /* פינות עליונות מעוגלות בלבד */
+    margin-bottom: 1rem;
+}
+
+
+/* עיצוב הביקורות */
+#reviews {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
+    justify-content: space-between;
+}
+
+.review {
+    width: 45%;  /* התאמה לשתי עמודות */
+    background-color: #E3DAA3;
+    border: 2px solid #999;
+    border-radius: 20px;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+
+
+.review img:first-child {
+    float: left;
+    margin-right: 5px;
+}
+
+.review p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* עיצוב שם המבקר */
+.critic {
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    margin-top: 0.4rem; /* הקטנת ריווח מעל שם המבקר */
+    font-size: 0.85rem; /* הקטנת גודל הטקסט */
+    color: #444;
+}
+
+.critic img {
+    margin-right: 5px;
+}
+
+/* עיצוב סקירה כללית */
+#general-overview {
+    width: 30%;
+    background-color: #5D8B3E;
+    color: #F1F1E4DA;
+    padding: 1.2rem; /* התאמת ריווח פנימי */
+    box-sizing: border-box;
+    border-radius: 12px; /* התאמת פינות מעוגלות */
     font-family: Calibri, sans-serif;
 }
 
-#general-overview dl {
-    margin: 0;
+#general-overview img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
 }
 
+/* עיצוב פרטים בסקירה */
 #general-overview dt {
     font-weight: bold;
     margin-top: 0.9rem;
@@ -102,58 +172,13 @@ main {
     margin-left: 0;
 }
 
+/* קישורים */
 #general-overview a {
     color: darkblue;
     text-decoration: none;
 }
 
-/* Reviews section */
-#reviews {
-    width: 70%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.review {
-    width: 48%;
-    background-color: #E3DAA3;
-    border: 2px solid #999;
-    border-radius: 20px;
-    margin-bottom: 1rem;
-    padding: 15px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
-}
-
-.review p {
-    margin: 0;
-    font-size: 1rem;
-}
-
-.critic {
-    font-style: italic;
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-    font-size: 0.9rem;
-    color: #444;
-}
-
-.critic img {
-    margin-right: 5px;
-}
-
-/* User reviews */
-.user-review {
-    background-color: #E3DAA3; /* Same as other reviews */
-}
-
-/* Footer */
+/* עיצוב תחתית הדף */
 footer {
     background-color: #5D8B3E;
     color: #FFF;
@@ -164,33 +189,21 @@ footer {
     width: 100%;
 }
 
-/* Mobile responsiveness */
+/* התאמה למובייל */
 @media screen and (max-width: 786px) {
     main {
         flex-direction: column;
         align-items: center;
     }
 
-    #general-overview {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-
+    #general-overview,
     #reviews {
         width: 100%;
-        flex-direction: column;
-        align-items: center;
     }
 
     .review {
         width: 90%;
         margin: 0 auto 1rem auto;
-    }
-
-    header img {
-        height: auto;
-        max-width: 100%;
     }
 
     h1 {
