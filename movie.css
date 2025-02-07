@@ -3,157 +3,62 @@ body {
     margin: 0;
     padding: 0;
     font-family: Tahoma, Arial, sans-serif;
+    font-size: 1rem;
     background-image: url('background.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 /* עיצוב הבאנר */
 header {
     width: 100%;
-    height: 4rem;  /* גובה מדויק */
+    height: 4rem;
     background-image: url('bannerbg.png');
     background-repeat: repeat-x;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0;
-    padding: 0;
 }
 
 header img {
-    height: 100%;  /* מתאים לגובה הבאנר */
-    width: auto;   /* שמירה על יחס גובה-רוחב נכון */
+    height: 100%;
+    width: auto;
 }
 
 /* עיצוב כותרת */
 h1 {
-    font-family: Verdana, Calibri, sans-serif;  /* סדר עדיפויות לגופנים */
-    font-size: 3rem;  /* גודל גופן */
-    font-weight: bold;  /* טקסט מודגש */
-    text-align: center;  /* מרכז את הטקסט */
-    color: #000;  /* צבע הטקסט */
-    text-shadow: 2px 2px #999999;  /* צל לטקסט */
-    margin: 1rem 0;  /* ריווח מעל ומתחת לכותרת */
-}
-
-#rating {
-    width: 100%;  /* פרישת הדירוג לרוחב מלא של המסגרת */
-    background-image: url('rbg.png');
-    background-repeat: repeat-x;
-    height: 90px;
-    display: flex;
-    align-items: center;
-    padding-left: 15px;  /* הכנסת התוכן פנימה */
-    border-radius: 10px;
-    margin-bottom: 1rem;
-    box-sizing: border-box;
-}
-
-#rating img {
-    height: 70px;  /* התאמת גובה האייקון */
-    margin-right: 10px;
-}
-
-#rating span {
-    font-size: 4rem;
+    font-family: Verdana, Calibri, sans-serif;
+    font-size: 3rem;
     font-weight: bold;
-    color: #FF0000;
-    line-height: 90px;
+    text-align: center;
+    color: #000;
+    text-shadow: 2px 2px #999999;
+    margin: 1rem 0;
 }
 
-
-/* אזור התוכן המרכזי */
+/* תוכן ראשי */
 main {
-    width: 90%;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
     border: 4px solid #999;
     border-radius: 40px;
     padding: 20px;
     box-sizing: border-box;
 }
 
-/* אזור שמאלי - ביקורות ודירוג */
-#left-content {
-    width: 68%;  /* הרחבה קלה של אזור הביקורות */
-}
-
+/* סקירה כללית */
 #general-overview {
-    width: 28%;
+    width: 25%;
     background-color: #5D8B3E;
-    color: #F1F1E4DA;
+    color: #F1F1E4;
     padding: 1.5rem;
-    border-radius: 10px;  /* פינות מעוגלות */
-    box-sizing: border-box;
-    overflow: hidden;  /* מניעת חריגה של התמונה מהמסגרת */
-}
-
-#general-overview img {
-    width: 100%;
-    border-radius: 10px 10px 0 0;  /* פינות עליונות מעוגלות בלבד */
-    margin-bottom: 1rem;
-}
-
-
-/* עיצוב הביקורות */
-#reviews {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5%;
-    justify-content: space-between;
-}
-
-.review {
-    width: 45%;  /* התאמה לשתי עמודות */
-    background-color: #E3DAA3;
-    border: 2px solid #999;
-    border-radius: 20px;
-    padding: 8px;
-    box-sizing: border-box;
-    margin-bottom: 1rem;
-}
-
-
-.review img:first-child {
-    float: left;
-    margin-right: 5px;
-}
-
-.review p {
-    margin: 0;
-    font-size: 1rem;
-    font-weight: bold;
-}
-
-/* עיצוב שם המבקר */
-.critic {
-    font-style: italic;
-    display: flex;
-    align-items: center;
-    margin-top: 0.4rem; /* הקטנת ריווח מעל שם המבקר */
-    font-size: 0.85rem; /* הקטנת גודל הטקסט */
-    color: #444;
-}
-
-.critic img {
-    margin-right: 5px;
-}
-
-/* עיצוב סקירה כללית */
-#general-overview {
-    width: 30%;
-    background-color: #5D8B3E;
-    color: #F1F1E4DA;
-    padding: 1.2rem; /* התאמת ריווח פנימי */
-    box-sizing: border-box;
-    border-radius: 12px; /* התאמת פינות מעוגלות */
+    border-radius: 10px;
     font-family: Calibri, sans-serif;
+    box-sizing: border-box;
+    margin-left: 2%;
 }
 
 #general-overview img {
@@ -162,7 +67,6 @@ main {
     margin-bottom: 1rem;
 }
 
-/* עיצוב פרטים בסקירה */
 #general-overview dt {
     font-weight: bold;
     margin-top: 0.9rem;
@@ -172,13 +76,71 @@ main {
     margin-left: 0;
 }
 
-/* קישורים */
 #general-overview a {
     color: darkblue;
     text-decoration: none;
 }
 
-/* עיצוב תחתית הדף */
+/* דירוג הסרט */
+#rating {
+    width: 100%;
+    background-image: url('rbg.png');
+    background-repeat: repeat-x;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+#rating img {
+    height: 90px;
+    margin-right: 10px;
+}
+
+#rating span {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #FF0000;
+}
+
+/* עיצוב הביקורות */
+#reviews {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5%;
+}
+
+.review-container {
+    width: 45%;  /* שתי עמודות בדיוק */
+    margin-bottom: 1.5rem;
+}
+
+.review {
+    background-color: #E3DAA3;
+    border: 2px solid #999;
+    border-radius: 20px;
+    padding: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* פרטי המבקר */
+.critic {
+    display: flex;
+    align-items: center;
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+.critic img {
+    margin-right: 5px;
+}
+
+/* פוטר */
 footer {
     background-color: #5D8B3E;
     color: #FFF;
@@ -186,37 +148,26 @@ footer {
     padding: 0.5rem;
     margin-top: 20px;
     font-size: 0.9rem;
-    width: 100%;
 }
 
 /* התאמה למובייל */
 @media screen and (max-width: 786px) {
     main {
         flex-direction: column;
-        align-items: center;
     }
 
-    #general-overview,
-    #reviews {
+    #general-overview {
+        order: -1;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    #left-content {
         width: 100%;
     }
 
-    .review {
+    .review-container {
         width: 90%;
         margin: 0 auto 1rem auto;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    #rating {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    #rating img {
-        margin-bottom: 10px;
     }
 }
