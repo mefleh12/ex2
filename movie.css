@@ -19,6 +19,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-size: contain; 
+
 }
 
 header img {
@@ -51,7 +53,7 @@ main {
 
 /* סקירה כללית */
 #general-overview {
-    width: 25%;
+    width: 30%;
     background-color: #5D8B3E;
     color: #F1F1E4;
     padding: 1.5rem;
@@ -59,6 +61,11 @@ main {
     font-family: Calibri, sans-serif;
     box-sizing: border-box;
     margin-left: 2%;
+    align-self: flex-start;
+}
+/* עיצוב הביקורות */
+#left-content {
+    width: 70%;  /* אזור הביקורות תופס 68% */
 }
 
 #general-overview img {
@@ -74,6 +81,7 @@ main {
 
 #general-overview dd {
     margin-left: 0;
+    margin-bottom: 0.9rem;
 }
 
 #general-overview a {
@@ -83,26 +91,30 @@ main {
 
 /* דירוג הסרט */
 #rating {
-    width: 100%;
+    display: flex;
+    align-items: center;   /* מוודא שהאלמנטים מיושרים אנכית */
+    justify-content: flex-start;  /* מיישר את התוכן לשמאל */
     background-image: url('rbg.png');
     background-repeat: repeat-x;
-    height: 90px;
-    display: flex;
-    align-items: center;
-    padding-left: 15px;
+    height: 90px;  /* גובה אחיד */
+    padding: 0 15px;  /* רווח פנימי מהצדדים */
     border-radius: 10px;
     margin-bottom: 1rem;
+    box-sizing: border-box;
+    background-size: contain; 
 }
 
 #rating img {
     height: 90px;
     margin-right: 10px;
+    width: auto;
 }
 
 #rating span {
     font-size: 4rem;
     font-weight: bold;
     color: #FF0000;
+    line-height: 90px;
 }
 
 /* עיצוב הביקורות */
@@ -114,7 +126,7 @@ main {
 }
 
 .review-container {
-    width: 45%;  /* שתי עמודות בדיוק */
+    width: 47%;  /* שתי עמודות בדיוק */
     margin-bottom: 1.5rem;
 }
 
@@ -133,12 +145,15 @@ main {
     display: flex;
     align-items: center;
     font-style: italic;
-    margin-top: 0.5rem;
+    margin-top: 1.5rem;
+    flex-direction: column;  /* מציב את שם המבקר ושם העיתון בשורות נפרדות */
+    align-items: flex-start;  /* יישור לשמאל */
 }
 
 .critic img {
     margin-right: 5px;
 }
+
 
 /* פוטר */
 footer {
