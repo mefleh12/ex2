@@ -146,8 +146,8 @@ main {
     align-items: center;
     font-style: italic;
     margin-top: 1.5rem;
-    flex-direction: column;  /* מציב את שם המבקר ושם העיתון בשורות נפרדות */
-    align-items: flex-start;  /* יישור לשמאל */
+    flex-direction: row;  /* מציב את האייקון לצד השם */  /* מציב את שם המבקר ושם העיתון בשורות נפרדות */
+    display: block;
 }
 
 .critic img {
