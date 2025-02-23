@@ -7,6 +7,15 @@
     <title>The Chronicles of Narnia: The Lion, the Witch, and the Wardrobe – Rancid Tomatoes</title>
     <link href="movie.css" type="text/css" rel="stylesheet" />
     <link rel="icon" type="image/gif" href="fresh.gif">
+    <style>
+        .hidden-heading {
+            position: absolute;
+            left: -9999px;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+    </style>
 </head>
 
 <body>
@@ -22,6 +31,8 @@
     <main>
         <!-- Left Section: Rating and Reviews -->
         <section id="left-content">
+            <h2 class="hidden-heading">Rating and Reviews</h2>
+
             <!-- Rating Section -->
             <div id="rating">
                 <img src="freshbig.png" alt="Fresh" />
@@ -30,6 +41,7 @@
 
             <!-- Reviews Section -->
             <section id="reviews">
+                <h2 class="hidden-heading">Reviews</h2>
 
                 <!-- Review Template -->
                 <div class="review-container">
@@ -127,9 +139,8 @@
                         <em>The Independent</em>
                     </p>
                 </div>
-
-                <!-- User Reviews -->
-                <div class="review-container">
+                   <!-- User Reviews -->
+                   <div class="review-container">
                     <div class="review user-review">
                         <img src="fresh.gif" alt="Fresh" />
                         <q>That's a good movie, and I watched it in my childhood era.</q>
@@ -152,12 +163,12 @@
                         <em>User Review</em>
                     </p>
                 </div>
-
             </section>
         </section>
 
-        <!-- General Overview Section (Moved to the right) -->
+        <!-- General Overview Section -->
         <section id="general-overview">
+            <h2 class="hidden-heading">General Overview</h2>
             <img src="overview.webp" alt="General Overview" />
             <dl>
                 <dt>Starring</dt>
